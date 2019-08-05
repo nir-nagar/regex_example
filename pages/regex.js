@@ -28,6 +28,7 @@ console.log(DOM)
 
 DOM.userName.addEventListener("input", function (event) {
     resetErrors()
+    console.log(event.currentTarget.value)
     const { value } = event.currentTarget
     if (!value) return raiseMessage(DOM.error, "Input Is Required")
     const emailValidationResult = validateEmail(value)
